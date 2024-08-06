@@ -1,0 +1,26 @@
+{
+  "repoUrl": "https://github.com/feit-comp30019/2024s2-project-1-alphabeta",
+  "teamName": "Your Team Name",
+  "teamMembers": [
+    {
+      "name": "David Kee Siong Chin",
+      "github": "KchinD",
+      "email": "chindk@student.unimelb.edu.au"
+    },
+    {
+      "name": "William Spongberg",
+      "github": "william-spongberg",
+      "email": "wspongberg@student.unimelb.edu.au"
+    },
+    {
+      "name": "Ananya Agarwal",
+      "github": "AnanyaAg04",
+      "email": "Aagarwal2556@student.unimelb.edu.au"
+    },
+    {
+      "name": "Alistair Wern Hao Cheah",
+      "github": "",
+      "email": "alistairwern@student.unimelb.edu.au"
+    }
+  ]
+}
