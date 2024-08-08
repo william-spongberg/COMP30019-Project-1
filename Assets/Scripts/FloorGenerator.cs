@@ -23,7 +23,7 @@ public class FloorGenerator : MonoBehaviour
 {
     public GameObject player;
     public GameObject floorPrefab;
-    public GameObject wallPrefab;
+    // public GameObject wallPrefab;
 
     ////public NavMeshSurface navMeshSurface;
 
@@ -41,7 +41,7 @@ public class FloorGenerator : MonoBehaviour
     public float wallHeight = 10.0f;
 
     private Dictionary<Vector2Int, GameObject> floors = new Dictionary<Vector2Int, GameObject>();
-    private Dictionary<Vector2Int, GameObject> walls = new Dictionary<Vector2Int, GameObject>();
+    //private Dictionary<Vector2Int, GameObject> walls = new Dictionary<Vector2Int, GameObject>();
     
     // Start is called before the first frame update
     void Start()
@@ -50,9 +50,9 @@ public class FloorGenerator : MonoBehaviour
         floorLength = floorPrefab.GetComponent<MeshRenderer>().bounds.size.z;
         floorHeight = floorPrefab.GetComponent<MeshRenderer>().bounds.size.y;
 
-        wallWidth = wallPrefab.GetComponent<MeshRenderer>().bounds.size.x;
-        wallLength = wallPrefab.GetComponent<MeshRenderer>().bounds.size.z;
-        wallHeight = wallPrefab.GetComponent<MeshRenderer>().bounds.size.y;
+        // wallWidth = wallPrefab.GetComponent<MeshRenderer>().bounds.size.x;
+        // wallLength = wallPrefab.GetComponent<MeshRenderer>().bounds.size.z;
+        // wallHeight = wallPrefab.GetComponent<MeshRenderer>().bounds.size.y;
 
         ////navMeshSurface.BuildNavMesh();
     }
@@ -119,62 +119,62 @@ public class FloorGenerator : MonoBehaviour
         }
     }
 
-    void CreateWalls(float playerX, float playerZ) {
-        // calculate bounds
-        int startX = Mathf.FloorToInt((playerX - radius) / (floorWidth + floorGap));
-        int endX = Mathf.CeilToInt((playerX + radius) / (floorWidth + floorGap));
-        int startY = Mathf.FloorToInt((playerZ - radius) / (floorLength + floorGap));
-        int endY = Mathf.CeilToInt((playerZ + radius) / (floorLength + floorGap));
-
-        // create walls within radius
-        for (int x = startX - 1; x <= endX + 1; x++) {
-            CreateWall(new Vector2Int(x, startY - 1));
-            CreateWall(new Vector2Int(x, endY + 1));
-        }
-
-        for (int y = startY - 1; y <= endY + 1; y++) {
-            CreateWallRotated(new Vector2Int(startX - 1, y));
-            CreateWallRotated(new Vector2Int(endX + 1, y));
-        }
-    }
-
-    void CreateWall(Vector2Int gridPosition) {
-        if (!walls.ContainsKey(gridPosition)) {
-            Vector3 worldPosition = new Vector3(gridPosition.x * (floorWidth + floorGap), 0, gridPosition.y * (floorLength + floorGap));
-            GameObject wall = Instantiate(wallPrefab, worldPosition, Quaternion.identity);
-            walls[gridPosition] = wall;
-        }
-    }
-
-    void CreateWallRotated(Vector2Int gridPosition) {
-        if (!walls.ContainsKey(gridPosition)) {
-            Vector3 worldPosition = new Vector3(gridPosition.x * (floorWidth + floorGap), 0, gridPosition.y * (floorLength + floorGap));
-            GameObject wall = Instantiate(wallPrefab, worldPosition, Quaternion.Euler(0, 90, 0));
-            walls[gridPosition] = wall;
-        }
-    }
-
-    void DestroyWalls(float playerX, float playerZ) {
-        // calculate bounds for wall destruction
-        int startX = Mathf.FloorToInt((playerX - radius) / (floorWidth + floorGap)) - 1;
-        int endX = Mathf.CeilToInt((playerX + radius) / (floorWidth + floorGap)) + 1;
-        int startY = Mathf.FloorToInt((playerZ - radius) / (floorLength + floorGap)) - 1;
-        int endY = Mathf.CeilToInt((playerZ + radius) / (floorLength + floorGap)) + 1;
-
-        List<Vector2Int> keysToRemove = new List<Vector2Int>();
-
-        // if player gets too close or too far away destroy
-        foreach (var kvp in walls) {
-            Vector2Int gridPosition = kvp.Key;
-            if (gridPosition.x < startX || gridPosition.x > endX || gridPosition.y < startY || gridPosition.y > endY ||
-                Mathf.Abs(gridPosition.x - playerX) > radius || Mathf.Abs(gridPosition.y - playerZ) > radius) {
-                Destroy(kvp.Value);
-                keysToRemove.Add(gridPosition);
-            }
-        }
-
-        foreach (var key in keysToRemove) {
-            walls.Remove(key);
-        }
-    }
+    // void CreateWalls(float playerX, float playerZ) {
+    //     // calculate bounds
+    //     int startX = Mathf.FloorToInt((playerX - radius) / (floorWidth + floorGap));
+    //     int endX = Mathf.CeilToInt((playerX + radius) / (floorWidth + floorGap));
+    //     int startY = Mathf.FloorToInt((playerZ - radius) / (floorLength + floorGap));
+    //     int endY = Mathf.CeilToInt((playerZ + radius) / (floorLength + floorGap));
+    //
+    //     // create walls within radius
+    //     for (int x = startX - 1; x <= endX + 1; x++) {
+    //         CreateWall(new Vector2Int(x, startY - 1));
+    //         CreateWall(new Vector2Int(x, endY + 1));
+    //     }
+    //
+    //     for (int y = startY - 1; y <= endY + 1; y++) {
+    //         CreateWallRotated(new Vector2Int(startX - 1, y));
+    //         CreateWallRotated(new Vector2Int(endX + 1, y));
+    //     }
+    // }
+    //
+    // void CreateWall(Vector2Int gridPosition) {
+    //     if (!walls.ContainsKey(gridPosition)) {
+    //         Vector3 worldPosition = new Vector3(gridPosition.x * (floorWidth + floorGap), 0, gridPosition.y * (floorLength + floorGap));
+    //         GameObject wall = Instantiate(wallPrefab, worldPosition, Quaternion.identity);
+    //         walls[gridPosition] = wall;
+    //     }
+    // }
+    //
+    // void CreateWallRotated(Vector2Int gridPosition) {
+    //     if (!walls.ContainsKey(gridPosition)) {
+    //         Vector3 worldPosition = new Vector3(gridPosition.x * (floorWidth + floorGap), 0, gridPosition.y * (floorLength + floorGap));
+    //         GameObject wall = Instantiate(wallPrefab, worldPosition, Quaternion.Euler(0, 90, 0));
+    //         walls[gridPosition] = wall;
+    //     }
+    // }
+    //
+    // void DestroyWalls(float playerX, float playerZ) {
+    //     // calculate bounds for wall destruction
+    //     int startX = Mathf.FloorToInt((playerX - radius) / (floorWidth + floorGap)) - 1;
+    //     int endX = Mathf.CeilToInt((playerX + radius) / (floorWidth + floorGap)) + 1;
+    //     int startY = Mathf.FloorToInt((playerZ - radius) / (floorLength + floorGap)) - 1;
+    //     int endY = Mathf.CeilToInt((playerZ + radius) / (floorLength + floorGap)) + 1;
+    //
+    //     List<Vector2Int> keysToRemove = new List<Vector2Int>();
+    //
+    //     // if player gets too close or too far away destroy
+    //     foreach (var kvp in walls) {
+    //         Vector2Int gridPosition = kvp.Key;
+    //         if (gridPosition.x < startX || gridPosition.x > endX || gridPosition.y < startY || gridPosition.y > endY ||
+    //             Mathf.Abs(gridPosition.x - playerX) > radius || Mathf.Abs(gridPosition.y - playerZ) > radius) {
+    //             Destroy(kvp.Value);
+    //             keysToRemove.Add(gridPosition);
+    //         }
+    //     }
+    //
+    //     foreach (var key in keysToRemove) {
+    //         walls.Remove(key);
+    //     }
+    // }
 }

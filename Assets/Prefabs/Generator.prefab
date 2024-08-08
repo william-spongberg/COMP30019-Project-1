@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd97a79c849e04a459f70790a593d9f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  floorPrefab: {fileID: 0}
+  player: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+  floorPrefab: {fileID: 7005422839858801569, guid: 21a0d6949bbd3554397da68914b49e71, type: 3}
   wallPrefab: {fileID: 0}
   radius: 75
   floorGap: 0
