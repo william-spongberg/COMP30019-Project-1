@@ -12,15 +12,12 @@ public class FollowPlayer : MonoBehaviour
     public float offsetY = 0.0f;
     public float offsetZ = 0.0f;
 
-    private float playerX;
-    private float playerY;
-    private float playerZ;
+    public float playerX, playerY, playerZ;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (prefab == null)
-            prefab = Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity);
+        prefab = Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity);
     }
 
     // Update is called once per frame
