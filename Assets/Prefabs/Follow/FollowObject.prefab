@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7687883748187070775}
   - component: {fileID: 3456564027579785836}
   m_Layer: 0
-  m_Name: Follow
+  m_Name: FollowObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,8 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf2fe0a9909875a4abbc62d6ccf62a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
-  prefab: {fileID: 4284635379631998315, guid: f39b252c5702b6a4e9e3ffe6f4879d65, type: 3}
-  offsetX: 0
-  offsetY: 0
-  offsetZ: 0
+  player: {fileID: 0}
+  prefab: {fileID: 0}
+  offsetVector: {x: 0, y: 0, z: 0}
+  playerCoords: {x: 0, y: 0, z: 0}

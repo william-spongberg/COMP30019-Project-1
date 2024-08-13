@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5350347832602460635
+--- !u!1 &9183435311612124648
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2282681210507294025}
-  - component: {fileID: 4016924955877189379}
+  - component: {fileID: 6108205493128538818}
+  - component: {fileID: 7419586022216249094}
   m_Layer: 0
-  m_Name: Generator
+  m_Name: FloorGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2282681210507294025
+--- !u!4 &6108205493128538818
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5350347832602460635}
+  m_GameObject: {fileID: 9183435311612124648}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -32,26 +32,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4016924955877189379
+--- !u!114 &7419586022216249094
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5350347832602460635}
+  m_GameObject: {fileID: 9183435311612124648}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd97a79c849e04a459f70790a593d9f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
-  floorPrefab: {fileID: 7005422839858801569, guid: 21a0d6949bbd3554397da68914b49e71, type: 3}
-  wallPrefab: {fileID: 0}
-  radius: 75
-  floorGap: 0
-  floorWidth: 10
-  floorLength: 10
-  floorHeight: 0
-  wallWidth: 1
-  wallLength: 10
-  wallHeight: 10
+  player: {fileID: 0}
+  objectPrefabs:
+  - {fileID: 1928575511649141333, guid: ce809fa903d691d4abf41733dc1a383d, type: 3}
+  - {fileID: 7005422839858801569, guid: 21a0d6949bbd3554397da68914b49e71, type: 3}
+  objectOffsets: []
+  objectDimensions: []
+  radius: 50
+  objectGap: 0

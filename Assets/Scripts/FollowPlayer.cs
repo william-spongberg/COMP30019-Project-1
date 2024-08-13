@@ -8,11 +8,9 @@ public class FollowPlayer : MonoBehaviour
     public GameObject player;
     public GameObject prefab;
 
-    public float offsetX = 0.0f;
-    public float offsetY = 0.0f;
-    public float offsetZ = 0.0f;
+    public Vector3 offsetVector = new Vector3(0, 0, 0);
 
-    public float playerX, playerY, playerZ;
+    public Vector3 playerCoords;
 
     // Start is called before the first frame update
     void Start()
@@ -23,11 +21,11 @@ public class FollowPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerX = player.transform.position.x;
-        playerY = player.transform.position.y;
-        playerZ = player.transform.position.z;
+        playerCoords.x = player.transform.position.x;
+        playerCoords.y = player.transform.position.y;
+        playerCoords.z = player.transform.position.z;
 
-        prefab.transform.position = new Vector3(playerX + offsetX, playerY + offsetY, playerZ + offsetZ);
+        prefab.transform.position = playerCoords + offsetVector;
         prefab.transform.rotation = player.transform.rotation;
     }
 }
