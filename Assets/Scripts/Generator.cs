@@ -1,78 +1,89 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
+[System.Serializable]
+public class SpawnObject
+{
+    public GameObject obj = null;
+    public Vector3 dimensions = new(0,0,0);
+    public Vector3 offsets = new(0,0,0);
+    public float spawnChance = 0.0f;
+}
+
 public class Generator : MonoBehaviour
 {
-    public GameObject player;
-    public List<GameObject> objectPrefabs = new List<GameObject>();
-    public List<Vector3> objectOffsets = new List<Vector3>();
-    public List<Vector3> objectDimensions = new List<Vector3>();
-
     public int radius = 10;
-    public float objectGap = 0f;
+    public float gap = 0f;
+    public Vector3 gridDimensions = new(0,0,0); // gridDimensions.x, gridDimensions.y, gridDimensions.z;
+    public GameObject player;
 
-    private float objectWidth, objectHeight, objectLength;
-
+    //public List<GameObject> objs = new List<GameObject>();
+    public List<SpawnObject> spawnObjects = new List<SpawnObject>();
     public Dictionary<Vector2Int, GameObject> objects = new Dictionary<Vector2Int, GameObject>();
     
     void Start()
-    {
-        // set object offsets
-        for (int i = 0; i < objectPrefabs.Count; i++) {
-            objectOffsets.Add(new Vector3(0, 0, 0));
+    {   
+        // update dimensions for each spawn object if not manually set
+        for(int i = 0; i < spawnObjects.Count; i++) {
+            if (spawnObjects[i].dimensions != null)
+                spawnObjects[i].dimensions = spawnObjects[i].obj.GetComponent<Renderer>().bounds.size;
         }
-
-        // get object dimensions
-        for (int i = 0; i < objectPrefabs.Count; i++) {
-            Vector3 objectDimension = objectPrefabs[i].GetComponent<Renderer>().bounds.size;
-            objectDimensions.Add(objectDimension);
-        }
-
 
         // TODO: need to all be same length, fix in future?
-        objectWidth = objectDimensions[0].x;
-        objectHeight = objectDimensions[0].y;
-        objectLength = objectDimensions[0].z;
+        // ! for now just set grid size to size of first object in list
+        gridDimensions.x = spawnObjects[0].dimensions.x; 
+        gridDimensions.y = spawnObjects[0].dimensions.y;
+        gridDimensions.z = spawnObjects[0].dimensions.z;
     }
 
     void Update()
     {
+        // get player 2d coords
         float playerX = player.transform.position.x;
         float playerZ = player.transform.position.z;
-        
+
+        // generate world
+        WorldGeneration(playerX, playerZ);
+    }
+
+    void WorldGeneration(float playerX, float playerZ) {
         CreateObjects(playerX, playerZ);
         DestroyObjects(playerX, playerZ);
     }
 
     void CreateObjects(float playerX, float playerZ) {
-        int startX = Mathf.FloorToInt((playerX - radius) / (objectWidth + objectGap));
-        int endX = Mathf.CeilToInt((playerX + radius) / (objectWidth + objectGap));
-        int startY = Mathf.FloorToInt((playerZ - radius) / (objectLength + objectGap));
-        int endY = Mathf.CeilToInt((playerZ + radius) / (objectLength + objectGap));
+        int startX = Mathf.FloorToInt((playerX - radius) / (gridDimensions.x + gap));
+        int endX = Mathf.CeilToInt((playerX + radius) / (gridDimensions.x + gap));
+        int startY = Mathf.FloorToInt((playerZ - radius) / (gridDimensions.z + gap));
+        int endY = Mathf.CeilToInt((playerZ + radius) / (gridDimensions.z + gap));
     
         for (int x = startX; x <= endX; x++) {
             for (int y = startY; y <= endY; y++) {
                 Vector2Int gridPosition = new Vector2Int(x, y);
                 if (!objects.ContainsKey(gridPosition)) {
-                    Vector3 worldPosition = new Vector3(x * (objectWidth + objectGap), -objectHeight / 2.0f, y * (objectLength + objectGap));
+                    Vector3 worldPosition = new Vector3(x * (gridDimensions.x + gap), -gridDimensions.y / 2.0f, y * (gridDimensions.z + gap));
 
-                    int randomIndex = Random.Range(0, objectPrefabs.Count);
-                    GameObject objectPrefab = objectPrefabs[randomIndex];
-                    Vector3 offset = objectOffsets[randomIndex];
-                    objectPrefab = Instantiate(objectPrefab, worldPosition + offset, Quaternion.identity);
-                    objects[gridPosition] = objectPrefab;
+                    int randomIndex = Random.Range(0, spawnObjects.Count);
+                    GameObject obj = spawnObjects[randomIndex].obj;
+                    Vector3 offset = spawnObjects[randomIndex].offsets;
+
+                    //float randomPercentage = ;
+
+                    obj = Instantiate(obj, worldPosition + offset, Quaternion.identity);
+                    objects[gridPosition] = obj;
                 }
             }
         }
     }
 
     void DestroyObjects(float playerX, float playerZ) {
-        int startX = Mathf.FloorToInt((playerX - radius) / objectWidth + objectGap);
-        int endX = Mathf.CeilToInt((playerX + radius) / objectWidth + objectGap);
-        int startY = Mathf.FloorToInt((playerZ - radius) / objectLength + objectGap);
-        int endY = Mathf.CeilToInt((playerZ + radius) / objectLength + objectGap);
+        int startX = Mathf.FloorToInt((playerX - radius) / gridDimensions.x + gap);
+        int endX = Mathf.CeilToInt((playerX + radius) / gridDimensions.x + gap);
+        int startY = Mathf.FloorToInt((playerZ - radius) / gridDimensions.z + gap);
+        int endY = Mathf.CeilToInt((playerZ + radius) / gridDimensions.z + gap);
 
         List<Vector2Int> keysToRemove = new List<Vector2Int>();
 
@@ -87,5 +98,9 @@ public class Generator : MonoBehaviour
         foreach (var key in keysToRemove) {
             objects.Remove(key);
         }
+    }
+
+    public int GetObjCount() {
+        return objects.Count;
     }
 }
