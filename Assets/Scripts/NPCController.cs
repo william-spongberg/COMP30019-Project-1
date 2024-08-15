@@ -16,7 +16,7 @@ public class NPCController : MonoBehaviour {
 
     public Animator animator;
     public NavMeshAgent agent;
-    public GameObject player;
+    private GameObject player;
     public Vector3 destination;
 
     // animation IDs
@@ -43,6 +43,8 @@ public class NPCController : MonoBehaviour {
         if (animator == null) {
             animator = GetComponent<Animator>();
         }
+
+        player = GameObject.FindGameObjectWithTag("Player");
 
         _animIDSpeed = Animator.StringToHash("Speed");
         _animIDGrounded = Animator.StringToHash("Grounded");

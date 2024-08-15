@@ -5,16 +5,19 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-    public GameObject player;
-    public GameObject prefab;
-
-    public Vector3 offsetVector = new Vector3(0, 0, 0);
-
-    public Vector3 playerCoords;
+    [SerializeField]
+    private GameObject prefab;
+    [SerializeField]
+    private Vector3 offsetVector = new Vector3(0, 0, 0);
+    [SerializeField]
+    private Vector3 playerCoords;
+    //[SerializeField]
+    private GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         prefab = Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity);
     }
 

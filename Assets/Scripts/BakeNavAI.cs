@@ -3,11 +3,12 @@ using UnityEngine;
 
 public class BakeNavAI : MonoBehaviour
 {
-    public NavMeshSurface navMeshSurface;
-
-    public Generator generator;
-
-    public int objCount = 0;
+    [SerializeField]
+    private NavMeshSurface navMeshSurface;
+    [SerializeField]
+    private Generator generator;
+    [SerializeField]
+    private int objCount = 0;
 
 
     void Update()

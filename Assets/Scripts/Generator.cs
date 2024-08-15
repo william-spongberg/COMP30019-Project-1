@@ -1,8 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.AI;
 
 [System.Serializable]
 public class SpawnObject
@@ -15,14 +12,18 @@ public class SpawnObject
 
 public class Generator : MonoBehaviour
 {
-    public int radius = 10;
-    public float gap = 0f;
-    public Vector3 gridDimensions = new(0,0,0); // gridDimensions.x, gridDimensions.y, gridDimensions.z;
-    public GameObject player;
-
-    //public List<GameObject> objs = new List<GameObject>();
-    public List<SpawnObject> spawnObjects = new List<SpawnObject>();
-    public Dictionary<Vector2Int, GameObject> objects = new Dictionary<Vector2Int, GameObject>();
+    [SerializeField]
+    private int radius = 10;
+    [SerializeField]
+    private float gap = 0f;
+    [SerializeField]
+    private Vector3 gridDimensions = new(0,0,0);
+    [SerializeField]
+    private GameObject player;
+    [SerializeField]
+    private List<SpawnObject> spawnObjects = new List<SpawnObject>();
+    [SerializeField]
+    private Dictionary<Vector2Int, GameObject> objects = new Dictionary<Vector2Int, GameObject>();
     
     void Start()
     {   
