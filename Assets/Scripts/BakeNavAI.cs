@@ -15,7 +15,8 @@ public class BakeNavAI : MonoBehaviour
     {
         // only bake when objects are created/destroyed
 
-        if (objCount != generator.GetObjCount()) {
+        if (objCount != generator.GetObjCount())
+        {
             objCount = generator.GetObjCount();
             navMeshSurface.BuildNavMesh();
         }

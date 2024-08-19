@@ -38,8 +38,5 @@ public class NPCSpawner : MonoBehaviour
 
         // spawn randomly within x radius of player
         GameObject newObj = Instantiate(npcs[randomIndex], pos, Quaternion.identity);
-
-        // spawn npc
-        //GameObject newObj = Instantiate(npcs[randomIndex], new Vector3(0,0,0), Quaternion.identity);
     }
 }
