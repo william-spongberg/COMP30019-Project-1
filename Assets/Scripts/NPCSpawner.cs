@@ -27,8 +27,6 @@ public class NPCSpawner : MonoBehaviour
 
     public void SpawnNPC()
     {
-        // TODO: change spawn position to be within x range of player
-
         // choose random npc
         int randomIndex = Random.Range(0, npcs.Count);
         float playerX = player.transform.position.x;

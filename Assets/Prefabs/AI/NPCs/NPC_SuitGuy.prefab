@@ -542,7 +542,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 40db3173a05ae3242b1c182a09b0a183, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -562,11 +562,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c061b5cabc9b1943a422d474b8bdac9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3.5
-  turnSpeed: 120
-  animator: {fileID: 4424876526481465281}
-  agent: {fileID: 4461594321626173006}
-  destination: {x: 0, y: 0, z: 0}
+  smoothDeltaPosition: {x: 0, y: 0}
+  velocity: {x: 0, y: 0}
+  dest: {x: 0, y: 0, z: 0}
 --- !u!195 &4461594321626173006
 NavMeshAgent:
   m_ObjectHideFlags: 0
