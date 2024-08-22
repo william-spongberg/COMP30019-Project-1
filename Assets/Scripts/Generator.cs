@@ -85,6 +85,21 @@ public class Generator : MonoBehaviour
                     GameObject obj = sObj.obj;
 
                     obj = Instantiate(obj, worldPosition + offset, Quaternion.identity);
+
+                    // scale to grid scale if not the same
+                    if (obj.GetComponent<Renderer>().bounds.size.x != gridDimensions.x)
+                    {
+                        obj.transform.localScale = new Vector3(gridDimensions.x / obj.GetComponent<Renderer>().bounds.size.x,
+                                   gridDimensions.x / obj.GetComponent<Renderer>().bounds.size.x,
+                                   gridDimensions.x / obj.GetComponent<Renderer>().bounds.size.x);
+                    }
+                    else if (obj.GetComponent<Renderer>().bounds.size.z != gridDimensions.z)
+                    {
+                        obj.transform.localScale = new Vector3(gridDimensions.z / obj.GetComponent<Renderer>().bounds.size.z,
+                                   gridDimensions.z / obj.GetComponent<Renderer>().bounds.size.z,
+                                   gridDimensions.z / obj.GetComponent<Renderer>().bounds.size.z);
+                    }
+
                     objects[gridPosition] = obj;
                 }
             }
@@ -121,21 +136,25 @@ public class Generator : MonoBehaviour
         return objects.Count;
     }
 
-    SpawnObject GetRandomObj() {
+    SpawnObject GetRandomObj()
+    {
         int totalWeight = 0;
         int currentWeight = 0;
 
         // sum all weights
-        foreach(SpawnObject obj in spawnObjects) {
+        foreach (SpawnObject obj in spawnObjects)
+        {
             totalWeight += obj.spawnWeight;
         }
 
         // pick random weight
         int randomWeight = Random.Range(0, totalWeight);
-        
-        foreach(SpawnObject obj in spawnObjects) {
+
+        foreach (SpawnObject obj in spawnObjects)
+        {
             currentWeight += obj.spawnWeight;
-            if (randomWeight <= currentWeight) {
+            if (randomWeight <= currentWeight)
+            {
                 return obj;
             }
         }

@@ -8,9 +8,9 @@ using UnityEngine.AI;
 public class NPCController : MonoBehaviour
 {
     [SerializeField]
-    private Vector2 smoothDeltaPosition = Vector2.zero;
+    private float speed = 0.0f;
     [SerializeField]
-    private Vector2 velocity = Vector2.zero;
+    private Vector3 velocity = Vector3.zero;
     [SerializeField]
     private Vector3 dest = Vector3.zero;
 
@@ -33,11 +33,13 @@ public class NPCController : MonoBehaviour
         // make nav agent move towards player
         agent.destination = player.transform.position;
         dest = agent.destination;
+        velocity = agent.velocity;
+        speed = agent.velocity.magnitude;
         
         // let animation know agent speed
-        anim.SetFloat("Speed", agent.velocity.magnitude);
+        anim.SetFloat("Speed", speed);
 
         // animation multiplier
-        anim.SetFloat("MotionSpeed", agent.velocity.magnitude/1.25f);
+        anim.SetFloat("MotionSpeed", speed*1.1f);
     }
 }
