@@ -123,8 +123,7 @@ The game uses Unity’s rigidbodies system to simulate real-world physics and co
 
 **Overall Aesthetic**: The game features a minimalistic yet unsettling low-poly art style, adding to the eerie, dreamlike atmosphere. The simplicity of the low-poly assets creates a sense of detachment and unease, reinforcing the game's uncomfortable tone.
 
-[img]
-<img title="Isolated elevator" alt="Alt text" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shutterstock.com%2Fsearch%2Fcreepy-elevator&psig=AOvVaw1XZ-iH8D06urm3K84LrFdr&ust=1724637334280000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCNjx8_GEj4gDFQAAAAAdAAAAABAR">
+<img title="Isolated elevator" alt="Alt text" src="https://www.istockphoto.com/photo/an-old-elevator-gm1088914534-292093369">
 (Example of an elevator to the next level)
 
 **Environment and Colors**: The game starts in an infinite office space, shrouded in perpetual fog that obscures the player's vision. This office is vast, empty, and repetitive, with long, monotonous hallways, and cubicles. The dark colour palette consists mainly of muted greys, blacks, and deep blues. Bright blue light will appear near elevators, standing in stark contrast to the darker surroundings. This is to guide the player toward the next objective while evoking a sense of coldness and detachment.
@@ -145,7 +144,8 @@ Phantoms: They feature red glowing eyes, which will appear as an unnatural glow 
 
 Possible enemy interactions with the environment, since the procedural landscape is built on tiles, enemies (The Admin) could have the ability to modify it during combat.
 
-[img]
+<img title="Isolated elevator" alt="Alt text" src="https://tropedia.fandom.com/wiki/Dragon_Age_2">
+
 
 ### Sound and Music ###
 
