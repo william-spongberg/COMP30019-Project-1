@@ -65,20 +65,18 @@ There will be 4 major characters in the story of the game:
 
 It is a first-person game with a camera that is moved by the mouse. This allows for more specific and better movement + combat in order to give more freedom to speedrunners and make it easier for the player to feel like they are falling into the world of the game. Only the character’s hands and office-shirt sleeves, as well any equipped weapons/tools, are visible on screen.
 
-<img title="a title" alt="Alt text" src="https://www.researchgate.net/profile/Wojciech-Jaskowski-2/publication/327570317/figure/fig1/AS:669514001817610@1536635985407/A-sample-screen-from-Doom-showing-the-first-person-perspective.ppm">
-(Figure 2: Example of similar first person perspective)
 
 ## Controls ##
 
 Our game is a movement based FPS. The player will be able to fire weapons using the mouse, as well as move using the arrow keys. In addition to moving and shooting, the player will be able to jump using the spacebar, and perform a sliding dash forwards using the ctrl button.
 
 <img title="a title" alt="Alt text" src="https://static.wikia.nocookie.net/titanfall/images/2/2e/TF2_Achievement_Power_Slide.jpg/revision/latest/scale-to-width-down/1200?cb=20180414120527">
-(Figure 3: Power Slide Achievement image from Titanfall 2)
+(Figure 2: Power Slide Achievement image from Titanfall 2)
 
 Wall running will also be implemented so that the player can interact more freely and creatively with the terrain. Especially as the game progresses and the environment of later levels becomes more complicated.
 
 <img title="a title" alt="Alt text" src="https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/03/pjimage-2021-03-19T113749.666.jpg?q=50&fit=crop&w=1100&h=618&dpr=1.5">
-(Figure 4: Example of wallrunning from Titanfall 2)
+(Figure 3: Example of wallrunning from Titanfall 2)
 The game’s controls are meant to have a high skill ceiling, so that players who are more experienced and more skillful will be able to navigate and combat enemies more easily.
 
 ### Player Progression ###
@@ -86,7 +84,7 @@ The game’s controls are meant to have a high skill ceiling, so that players wh
 Progression in our game is designed to reward players with a sense of satisfaction in their in-game abilities. As players delve deeper into the lair of the Admin, they will unlock new weapons that greatly expand their combat options. Each new weapon caters to a distinct playstyle, whether that be melee, long-range, or even running around with a grappling hook. Weapons are introduced at key points in the story. The first weapon unlockable is a simple nail gun.
 
 <img title="Nailgun example" alt="Alt text" src="https://images.free3d.com/imgd/l37/1100537.jpg">
-(Figure 5: Nailgun example)
+(Figure 4: Nailgun example)
 
 There will also be an element of skill progression, as the player gets more familiar with the game, they will find it easier to evade enemies as they grow accustomed to the movement controls, and learn what weapons are most effective against certain enemies.
 
@@ -104,7 +102,7 @@ The world is procedurally and infinitely generated using Perlin noise to allow f
 1. The first level is an office space that portrays familiarity and order which allows the player to be deceived into a sense of comfort before realising something feels off.
 
  <img title="First level" alt="Alt text" src="https://github.com/feit-comp30019/2024s2-project-1-alphabeta/blob/main/Images/image_2024-08-25_230238124.png?raw=true">
-(Figure 6: Example of what the first level will look like)
+(Figure 5: Example of what the first level will look like)
 
 2. The second level is outdoors in a city environment with buildings, roads and cars being placed now in a more disorderly manner, with the game’s world being reflected above the player in a manner similar to Dr Strange.
 
@@ -130,13 +128,13 @@ The game uses Unity’s rigidbodies system to simulate real-world physics and co
 **Overall Aesthetic**: The game features a minimalistic yet unsettling low-poly art style, adding to the eerie, dreamlike atmosphere. The simplicity of the low-poly assets creates a sense of detachment and unease, reinforcing the game's uncomfortable tone.
 
 <img title="Isolated elevator" alt="Alt text" src="https://media.istockphoto.com/id/1088914534/photo/an-old-elevator.jpg?s=1024x1024&w=is&k=20&c=qOkH0L2ZjmtG5BvIZjsZMk-n6X6Si0BPI-0ECANltFk=">
-(Figure 7: Example of an elevator to the next level)
+(Figure 6: Example of an elevator to the next level)
 
 **Environment and Colors**: The game starts in an infinite office space, shrouded in perpetual fog that obscures the player's vision. This office is vast, empty, and repetitive, with long, monotonous hallways, and cubicles. The dark colour palette consists mainly of muted greys, blacks, and deep blues. Bright blue light will appear near elevators, standing in stark contrast to the darker surroundings. This is to guide the player toward the next objective while evoking a sense of coldness and detachment.
 
 
 <img title="Eerie Atmosphere/lighting" alt="Alt text" src="https://cdn.mos.cms.futurecdn.net/uNEwCDpYeSshXdNUYnqpvM-1200-80.jpg">
-(Figure 8: Example of blue light highlighting an objective)
+(Figure 7: Example of blue light highlighting an objective)
 
 Low, eerie lighting is a key visual feature. Like flickering lights scattered in the office space create unsettling shadows and abrupt changes in visibility, adding to the tension.
 
@@ -169,7 +167,7 @@ Thus, we aim to utilise 3D audio to create the illusion of sounds originating fr
 1. **Main Screen**: Player can start or quit the game
 
     <img title="First level" alt="Alt text" src="https://github.com/feit-comp30019/2024s2-project-1-alphabeta/blob/main/Images/image_2024-08-25_231833229.png?raw=true">
-  (Figure 9: Example of a possible main screen)
+  (Figure 8: Example of a possible main screen)
 2. **Basic UI of gameplay screen**:
    - Total Timer (10 Minutes):
      - Purpose: The game has a fixed playtime of 10 minutes
@@ -228,14 +226,13 @@ Finally, there is justified fear surrounding making the game actually fun and in
 ## References ##
 
 1. Image of Ultrakill's cover image, taken from the Steam page of the game ULTRAKILL: https://store.steampowered.com/app/1229490/ULTRAKILL/
-2. Image capture of the game Doom, uploaded by Wojciech Jaśkowski on the website ResearchGate: https://www.researchgate.net/figure/A-sample-screen-from-Doom-showing-the-first-person-perspective_fig1_327570317
-3. Art taken from the XBOX 1 achievement art for Titanfall 2 achievement named "Power Slide"
-4. Taken from the article "Titanfall 2's Mobility Revolutionized Shooters - Or At Least It Should Have" by Cian Maher, published by The Gamer: https://www.thegamer.com/titanfall-2-mobility/
-5. Free 3D nailgun model made by user "printable_models" and published on the website "Free3D": https://free3d.com/3d-model/nail-gun-v1--273925.html
-6. Image taken from prototype of our game
-7. Stock photo of an elevator from the website Istock, credited to user "chainatp": https://www.istockphoto.com/photo/an-old-elevator-gm1088914534-292093369
-8. Image taken from the article "Little Nightmares 2 Review" written by Stacey Henley and published on PCGamer: https://www.pcgamer.com/little-nightmares-2-review/
-9. Image taken from prototype of our game
+2. Art taken from the XBOX 1 achievement art for Titanfall 2 achievement named "Power Slide"
+3. Taken from the article "Titanfall 2's Mobility Revolutionized Shooters - Or At Least It Should Have" by Cian Maher, published by The Gamer: https://www.thegamer.com/titanfall-2-mobility/
+4. Free 3D nailgun model made by user "printable_models" and published on the website "Free3D": https://free3d.com/3d-model/nail-gun-v1--273925.html
+5. Image taken from prototype of our game
+6. Stock photo of an elevator from the website Istock, credited to user "chainatp": https://www.istockphoto.com/photo/an-old-elevator-gm1088914534-292093369
+7. Image taken from the article "Little Nightmares 2 Review" written by Stacey Henley and published on PCGamer: https://www.pcgamer.com/little-nightmares-2-review/
+8. Image taken from prototype of our game
 
 
 
