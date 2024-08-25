@@ -9,7 +9,7 @@ Our game’s core concept is a movement based FPS Shmup(shoot em’ up) that tak
 Similar games include ULTRAKILL and Doom Slayer, which are both Shoot Em’ Ups, ULTRAKILL specifically is also a movement based FPS. 
 
 <img title="Ultrakill, a game by New Blood Interactive" alt="Alt text" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1229490/header.jpg?t=1704406135"> 
-(Ultrakill, a game by New Blood Interactive)
+(Figure 1: Ultrakill, a game by New Blood Interactive)
 
 For the level design, one inspiration we drew from was the Backrooms, an ordinary environment that is eerie in context(in the case of the Backrooms, the infinite size and monsters). Similar to the Backrooms, the environments in our game will primarily be normal environments that have become unsettling or uncomfortable due to contextual factors.
 
@@ -66,18 +66,19 @@ There will be 4 major characters in the story of the game:
 It is a first-person game with a camera that is moved by the mouse. This allows for more specific and better movement + combat in order to give more freedom to speedrunners and make it easier for the player to feel like they are falling into the world of the game. Only the character’s hands and office-shirt sleeves, as well any equipped weapons/tools, are visible on screen.
 
 <img title="a title" alt="Alt text" src="https://www.google.com/imgres?q=Ultimate%20Doom&imgurl=https%3A%2F%2Fi.ebayimg.com%2Fimages%2Fg%2FP8wAAOSwlF5hdFin%2Fs-l1200.jpg&imgrefurl=https%3A%2F%2Fwww.ebay.com.au%2Fitm%2F255193057283&docid=Bh9KbadkfReXAM&tbnid=DaU71hTrfaJeOM&vet=12ahUKEwjb9s6gl5CIAxXvzzgGHeOEJt8QM3oECG4QAA..i&w=1200&h=680&hcb=2&ved=2ahUKEwjb9s6gl5CIAxXvzzgGHeOEJt8QM3oECG4QAA">
-
+(Figure 2:)
 
 ## Controls ##
 
 Our game is a movement based FPS. The player will be able to fire weapons using the mouse, as well as move using the arrow keys. In addition to moving and shooting, the player will be able to jump using the spacebar, and perform a sliding dash forwards using the ctrl button.
 
 <img title="a title" alt="Alt text" src="https://static.wikia.nocookie.net/titanfall/images/2/2e/TF2_Achievement_Power_Slide.jpg/revision/latest/scale-to-width-down/1200?cb=20180414120527">
+(Figure 3: Power Slide Achievement image from Titanfall 2)
 
 Wall running will also be implemented so that the player can interact more freely and creatively with the terrain. Especially as the game progresses and the environment of later levels becomes more complicated.
 
 <img title="a title" alt="Alt text" src="https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/03/pjimage-2021-03-19T113749.666.jpg?q=50&fit=crop&w=1100&h=618&dpr=1.5">
-
+(Figure 4: Example of wallrunning from Titanfall 2)
 The game’s controls are meant to have a high skill ceiling, so that players who are more experienced and more skillful will be able to navigate and combat enemies more easily.
 
 ### Player Progression ###
@@ -85,7 +86,7 @@ The game’s controls are meant to have a high skill ceiling, so that players wh
 Progression in our game is designed to reward players with a sense of satisfaction in their in-game abilities. As players delve deeper into the lair of the Admin, they will unlock new weapons that greatly expand their combat options. Each new weapon caters to a distinct playstyle, whether that be melee, long-range, or even running around with a grappling hook. Weapons are introduced at key points in the story. The first weapon unlockable is a simple nail gun.
 
 <img title="Nailgun example" alt="Alt text" src="https://images.free3d.com/imgd/l37/1100537.jpg">
-(Nailgun example)
+(Figure 5: Nailgun example)
 
 There will also be an element of skill progression, as the player gets more familiar with the game, they will find it easier to evade enemies as they grow accustomed to the movement controls, and learn what weapons are most effective against certain enemies.
 
@@ -103,10 +104,10 @@ The world is procedurally and infinitely generated using Perlin noise to allow f
 1. The first level is an office space that portrays familiarity and order which allows the player to be deceived into a sense of comfort before realising something feels off.
 
  <img title="First level" alt="Alt text" src="https://github.com/feit-comp30019/2024s2-project-1-alphabeta/blob/main/Images/image_2024-08-25_230238124.png?raw=true">
-(Example of what the first level will look like)
+(Figure 6: Example of what the first level will look like)
+
 2. The second level is outdoors in a city environment with buildings, roads and cars being placed now in a more disorderly manner, with the game’s world being reflected above the player in a manner similar to Dr Strange.
 
- [IMG]
 
 3. The third and final level is much more abstract and bizarre, as the world design is now fully starting to leave normalcy far behind.
 
@@ -125,16 +126,18 @@ The game uses Unity’s rigidbodies system to simulate real-world physics and co
 ### Art Style ###
 
 <img title="Low poly art style?" alt="Alt text" src="https://openart.ai/discovery/sd-1006034393002942524">
+(Figure 7:)
 
 **Overall Aesthetic**: The game features a minimalistic yet unsettling low-poly art style, adding to the eerie, dreamlike atmosphere. The simplicity of the low-poly assets creates a sense of detachment and unease, reinforcing the game's uncomfortable tone.
 
 <img title="Isolated elevator" alt="Alt text" src="https://www.istockphoto.com/photo/an-old-elevator-gm1088914534-292093369">
-(Example of an elevator to the next level)
+(Figure 8: Example of an elevator to the next level)
 
 **Environment and Colors**: The game starts in an infinite office space, shrouded in perpetual fog that obscures the player's vision. This office is vast, empty, and repetitive, with long, monotonous hallways, and cubicles. The dark colour palette consists mainly of muted greys, blacks, and deep blues. Bright blue light will appear near elevators, standing in stark contrast to the darker surroundings. This is to guide the player toward the next objective while evoking a sense of coldness and detachment.
 
 
 <img title="Eerie Atmosphere/lighting" alt="Alt text" src="https://www.pcgamer.com/little-nightmares-2-review/">
+(Figure 9: )
 
 Low, eerie lighting is a key visual feature. Like flickering lights scattered in the office space create unsettling shadows and abrupt changes in visibility, adding to the tension.
 
@@ -151,7 +154,7 @@ Phantoms: They feature red glowing eyes, which will appear as an unnatural glow 
 Possible enemy interactions with the environment, since the procedural landscape is built on tiles, enemies (The Admin) could have the ability to modify it during combat.
 
 <img title="Isolated elevator" alt="Alt text" src="https://tropedia.fandom.com/wiki/Dragon_Age_2">
-
+(Figure 10: )
 
 ### Sound and Music ###
 
@@ -169,7 +172,7 @@ Thus, we aim to utilise 3D audio to create the illusion of sounds originating fr
 1. **Main Screen**: Player can start or quit the game
 
     <img title="First level" alt="Alt text" src="https://github.com/feit-comp30019/2024s2-project-1-alphabeta/blob/main/Images/image_2024-08-25_231833229.png?raw=true">
-  (Example of a possible main screen)
+  (Figure 11: Example of a possible main screen)
 2. **Basic UI of gameplay screen**:
    - Total Timer (10 Minutes):
      - Purpose: The game has a fixed playtime of 10 minutes
@@ -227,8 +230,14 @@ Finally, there is justified fear surrounding making the game actually fun and in
 
 ## References ##
 
-1. 
+1. Image of Ultrakill's cover image, taken from the Steam page of the game ULTRAKILL: https://store.steampowered.com/app/1229490/ULTRAKILL/
 2. 
+3. Art taken from the XBOX 1 achievement art for Titanfall 2 achievement named "Power Slide"
+4. Taken from the article "Titanfall 2's Mobility Revolutionized Shooters - Or At Least It Should Have" by Cian Maher, published by The Gamer: https://www.thegamer.com/titanfall-2-mobility/
+5. Free 3D nailgun model made by user: printable_models and published on the website "Free3D": https://free3d.com/3d-model/nail-gun-v1--273925.html
+6. Image taken from prototyupe of our game
+7. Image generated by ChatGPT
+8. 
 
 
 
