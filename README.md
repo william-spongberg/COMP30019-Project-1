@@ -6,9 +6,13 @@
 
 Our game’s core concept is a movement based FPS Shmup(shoot em’ up) that takes place in an eerie and surreal environment that pits the player and the main character(Aidan) against an otherworldly, ominous, eldritch being known as The Admin. In order to save his wife, Aidan must venture into The Admin’s domain, destroying the entity’s forces through a series of increasingly abnormal environments and delving deeper level by level until he can confront The Admin.
 
-Similar games include ULTRAKILL and Doom Slayer, which are both Shoot Em’ Ups, with ULTRAKILL also being a movement based FPS. For the level design, inspirations include the Backrooms, an ordinary environment that is eerie in context(in the case of the Backrooms, the infinite size and monsters).
+Similar games include ULTRAKILL and Doom Slayer, which are both Shoot Em’ Ups, ULTRAKILL specifically is also a movement based FPS. 
 
-Our game is focused on telling a story and giving players a memorable experience through the medium of the game’s mechanics, atmosphere, and narrative.
+<img title="Ultrakill, a game by New Blood Interactive" alt="Alt text" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1229490/header.jpg?t=1704406135"> 
+
+For the level design, one inspiration we drew from was the Backrooms, an ordinary environment that is eerie in context(in the case of the Backrooms, the infinite size and monsters). Similar to the Backrooms, the environments in our game will primarily be normal environments that have become unsettling or uncomfortable due to contextual factors.
+
+Our game is focused on telling a story and giving players a memorable experience through the medium of the game’s mechanics, atmosphere, and narrative. 
 
 ### Target Audience ###
 
@@ -76,7 +80,7 @@ The game’s controls are meant to have a high skill ceiling, so that players wh
 
 Progression in our game is designed to reward players with a sense of satisfaction in their in-game abilities. As players delve deeper into the lair of the Admin, they will unlock new weapons that greatly expand their combat options. Each new weapon caters to a distinct playstyle, whether that be melee, long-range, or even running around with a grappling hook. Weapons are introduced at key points in the story. The first weapon unlockable is a simple nail gun.
 
-[img]
+<img title="Nailgun example" alt="Alt text" src="https://images.free3d.com/imgd/l37/1100537.jpg">
 
 ### Gameplay Mechanics ###
 
