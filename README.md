@@ -20,7 +20,7 @@ Thanks to a timer and excellent movement design, it is also perfect for speedrun
 
 While our game already has a brand-new experience every time you play thanks to the procedurally generated world and environment, added depth is found in the out-of-this-world, shadowy, and surreal design. This, combined with an emotional storyline and an action-packed experience, keep this game unique for every new and returning player.
 
-### Story and Narrative ###
+## Story and Narrative ##
 
 ### Backstory ###
 
