@@ -9,6 +9,7 @@ Our game’s core concept is a movement based FPS Shmup(shoot em’ up) that tak
 Similar games include ULTRAKILL and Doom Slayer, which are both Shoot Em’ Ups, ULTRAKILL specifically is also a movement based FPS. 
 
 <img title="Ultrakill, a game by New Blood Interactive" alt="Alt text" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1229490/header.jpg?t=1704406135"> 
+(Ultrakill, a game by New Blood Interactive)
 
 For the level design, one inspiration we drew from was the Backrooms, an ordinary environment that is eerie in context(in the case of the Backrooms, the infinite size and monsters). Similar to the Backrooms, the environments in our game will primarily be normal environments that have become unsettling or uncomfortable due to contextual factors.
 
@@ -81,6 +82,7 @@ The game’s controls are meant to have a high skill ceiling, so that players wh
 Progression in our game is designed to reward players with a sense of satisfaction in their in-game abilities. As players delve deeper into the lair of the Admin, they will unlock new weapons that greatly expand their combat options. Each new weapon caters to a distinct playstyle, whether that be melee, long-range, or even running around with a grappling hook. Weapons are introduced at key points in the story. The first weapon unlockable is a simple nail gun.
 
 <img title="Nailgun example" alt="Alt text" src="https://images.free3d.com/imgd/l37/1100537.jpg">
+(Nailgun example)
 
 ### Gameplay Mechanics ###
 
@@ -121,6 +123,7 @@ The game uses Unity’s rigidbodies system to simulate real-world physics and co
 
 [img]
 <img title="Isolated elevator" alt="Alt text" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shutterstock.com%2Fsearch%2Fcreepy-elevator&psig=AOvVaw1XZ-iH8D06urm3K84LrFdr&ust=1724637334280000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCNjx8_GEj4gDFQAAAAAdAAAAABAR">
+(Example of an elevator to the next level)
 
 **Environment and Colors**: The game starts in an infinite office space, shrouded in perpetual fog that obscures the player's vision. This office is vast, empty, and repetitive, with long, monotonous hallways, and cubicles. The dark colour palette consists mainly of muted greys, blacks, and deep blues. Bright blue light will appear near elevators, standing in stark contrast to the darker surroundings. This is to guide the player toward the next objective while evoking a sense of coldness and detachment.
 
