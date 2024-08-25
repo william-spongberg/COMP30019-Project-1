@@ -84,6 +84,8 @@ Progression in our game is designed to reward players with a sense of satisfacti
 <img title="Nailgun example" alt="Alt text" src="https://images.free3d.com/imgd/l37/1100537.jpg">
 (Nailgun example)
 
+There will also be an element of skill progression, as the player gets more familiar with the game, they will find it easier to evade enemies as they grow accustomed to the movement controls, and learn what weapons are most effective against certain enemies.
+
 ### Gameplay Mechanics ###
 
 
