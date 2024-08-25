@@ -74,15 +74,14 @@ The game’s controls are meant to have a high skill ceiling, so that players wh
 
 ### Progression ###
 
-The player will gain new weapons as they progress through the game, increasing their versatility and options in choosing how to deal with enemies. The first weapon will be a basic Nail Gun, and the player will gain a variety of close ranged weapons and far ranged weapons.
+Progression in our game is designed to reward players with a sense of satisfaction in their in-game abilities. As players delve deeper into the lair of the Admin, they will unlock new weapons that greatly expand their combat options. Each new weapon caters to a distinct playstyle, whether that be melee, long-range, or even running around with a grappling hook. Weapons are introduced at key points in the story.
+
+Other than weapon progression, players also able to increase thier range of movement abilities. As they progress they can unlock more advanced movement techniques such as dashing, sliding, or wall running. Mastering their movement will be crucial for both their combat and world exploration.
 
 [img]
 
-There is also an element of skill progression, as the player gets more familiar with the game, they will find it easier to evade enemies as they grow accustomed to the movement controls, and learn what weapons are most effective against certain enemies.
-
 ### Gameplay Mechanics ###
 
-[Alistair TODO]
 
 ## Levels and World Design ##
 
@@ -127,7 +126,16 @@ The game uses Unity’s rigidbodies system to simulate real-world physics and co
 Low, eerie lighting is a key visual feature. Like flickering lights scattered in the office space create unsettling shadows and abrupt changes in visibility, adding to the tension.
 
 **Enemy Design**:
-They feature red glowing eyes, which will seem as an unnatural glow amidst the dark fog, signalling danger and evoking a primal fear response from the player.
+
+Variety of Enemy Types: We will introduce different classes of enemies with distinct behaviors and appearances that align with the surreal environment. =
+
+Echoes: Enemies that are distorted reflections of Aidan, representing his fragmented memories. They mimic his movement pattern but have their own delayed rhythm.
+
+Hollows: Victims whose memories were devoured by The Admin. With hollow and empty eyes, they move erratically and randomly pause to clutch their heads, as if trying to bring out their true selves. Implode upon death.
+
+Phantoms: They feature red glowing eyes, which will appear as an unnatural glow amidst the dark fog. They appear and disappear in and out of the fog, only every attempting to attack the player when they have their backs turned. Inspiring a primal fear and sense of adrenaline response. 
+
+Possible enemy interactions with the environment, since the procedural landscape is built on tiles, enemies (The Admin) could have the ability to modify it during combat.
 
 [img]
 
