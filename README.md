@@ -103,7 +103,7 @@ The world is procedurally and infinitely generated using Perlin noise to allow f
 1. The first level is an office space that portrays familiarity and order which allows the player to be deceived into a sense of comfort before realising something feels off.
 
  <img title="First level" alt="Alt text" src="https://github.com/feit-comp30019/2024s2-project-1-alphabeta/blob/main/Images/image_2024-08-25_230238124.png?raw=true">
-
+(Example of what the first level will look like)
 2. The second level is outdoors in a city environment with buildings, roads and cars being placed now in a more disorderly manner, with the game’s world being reflected above the player in a manner similar to Dr Strange.
 
  [IMG]
@@ -168,31 +168,27 @@ Thus, we aim to utilise 3D audio to create the illusion of sounds originating fr
 
 1. **Main Screen**: Player can start or quit the game
 
-    [img]
-
+    <img title="First level" alt="Alt text" src="https://github.com/feit-comp30019/2024s2-project-1-alphabeta/blob/main/Images/image_2024-08-25_231833229.png?raw=true">
+  (Example of a possible main screen)
 2. **Basic UI of gameplay screen**:
    - Total Timer (10 Minutes):
      - Purpose: The game has a fixed playtime of 10 minutes
      - Visibility: This timer is visible to the player in a discreet spot (top left screen), with a countdown animation.
      - Health Bar:
-     - Purpose: The player’s wife will die if the health bar reaches 0.
+     - Purpose: The player will die if the health bar reaches 0.
      - Visibility: Positioned at the top right corner of the screen
    - Score:
      - Purpose: It shows the score that the player has gained while going through his memories.
      - Visibility: Positioned at the top right corner of the screen
 
-    [img]
-
 3. Pause Menu:
     - This screen appears when the player clicks on the setting icon.
     - The player can pause the game ( the timer stops ), and can choose to restart or quit the game. The player can also adjust the sound levels of the game from here.
 
-    [img]
-
 4. Game End Screen:
 5. - As described earlier, the game has two endings:
-   - The player fights the admin and wins, thus saving his wife.
-   - The player loses and couldn’t save his wife.
+   - The player loses and cannot save his wife
+   - The player beats the game and is returned to the home screen
 
 ## Technology and Tools ##
 
@@ -232,5 +228,9 @@ Finally, there is justified fear surrounding making the game actually fun and in
 ## References ##
 
 1. 
-    1. 
-2.
+2. 
+
+
+
+  
+
