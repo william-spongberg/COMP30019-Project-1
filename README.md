@@ -64,11 +64,11 @@ It is a first-person game with a camera that is moved by the mouse. This allows 
 
 Our game is a movement based FPS. The player will be able to fire weapons using the mouse, as well as move using the arrow keys. In addition to moving and shooting, the player will be able to jump using the spacebar, and perform a sliding dash forwards using the ctrl button.
 
-[img]
+![Sliding dash example] (https://static.wikia.nocookie.net/titanfall/images/2/2e/TF2_Achievement_Power_Slide.jpg/revision/latest/scale-to-width-down/1200?cb=20180414120527)
 
 Wall running will also be implemented so that the player can interact more freely and creatively with the terrain. Especially as the game progresses and the environment of later levels becomes more complicated.
 
-![Alt text] (https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/03/pjimage-2021-03-19T113749.666.jpg?q=50&fit=crop&w=1100&h=618&dpr=1.5) 
+![Wall running example] (https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/03/pjimage-2021-03-19T113749.666.jpg?q=50&fit=crop&w=1100&h=618&dpr=1.5) 
 
 The game’s controls are meant to have a high skill ceiling, so that players who are more experienced and more skillful will be able to navigate and combat enemies more easily.
 
