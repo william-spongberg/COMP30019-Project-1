@@ -65,6 +65,9 @@ There will be 4 major characters in the story of the game:
 
 It is a first-person game with a camera that is moved by the mouse. This allows for more specific and better movement + combat in order to give more freedom to speedrunners and make it easier for the player to feel like they are falling into the world of the game. Only the character’s hands and office-shirt sleeves, as well any equipped weapons/tools, are visible on screen.
 
+<img title="a title" alt="Alt text" src="https://www.google.com/imgres?q=Ultimate%20Doom&imgurl=https%3A%2F%2Fi.ebayimg.com%2Fimages%2Fg%2FP8wAAOSwlF5hdFin%2Fs-l1200.jpg&imgrefurl=https%3A%2F%2Fwww.ebay.com.au%2Fitm%2F255193057283&docid=Bh9KbadkfReXAM&tbnid=DaU71hTrfaJeOM&vet=12ahUKEwjb9s6gl5CIAxXvzzgGHeOEJt8QM3oECG4QAA..i&w=1200&h=680&hcb=2&ved=2ahUKEwjb9s6gl5CIAxXvzzgGHeOEJt8QM3oECG4QAA">
+
+
 ## Controls ##
 
 Our game is a movement based FPS. The player will be able to fire weapons using the mouse, as well as move using the arrow keys. In addition to moving and shooting, the player will be able to jump using the spacebar, and perform a sliding dash forwards using the ctrl button.
@@ -121,6 +124,8 @@ The game uses Unity’s rigidbodies system to simulate real-world physics and co
 
 ### Art Style ###
 
+<img title="Low poly art style?" alt="Alt text" src="https://openart.ai/discovery/sd-1006034393002942524">
+
 **Overall Aesthetic**: The game features a minimalistic yet unsettling low-poly art style, adding to the eerie, dreamlike atmosphere. The simplicity of the low-poly assets creates a sense of detachment and unease, reinforcing the game's uncomfortable tone.
 
 <img title="Isolated elevator" alt="Alt text" src="https://www.istockphoto.com/photo/an-old-elevator-gm1088914534-292093369">
@@ -128,7 +133,8 @@ The game uses Unity’s rigidbodies system to simulate real-world physics and co
 
 **Environment and Colors**: The game starts in an infinite office space, shrouded in perpetual fog that obscures the player's vision. This office is vast, empty, and repetitive, with long, monotonous hallways, and cubicles. The dark colour palette consists mainly of muted greys, blacks, and deep blues. Bright blue light will appear near elevators, standing in stark contrast to the darker surroundings. This is to guide the player toward the next objective while evoking a sense of coldness and detachment.
 
-[img]
+
+<img title="Eerie Atmosphere/lighting" alt="Alt text" src="https://www.pcgamer.com/little-nightmares-2-review/">
 
 Low, eerie lighting is a key visual feature. Like flickering lights scattered in the office space create unsettling shadows and abrupt changes in visibility, adding to the tension.
 
