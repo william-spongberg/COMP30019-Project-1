@@ -72,11 +72,9 @@ Wall running will also be implemented so that the player can interact more freel
 
 The game’s controls are meant to have a high skill ceiling, so that players who are more experienced and more skillful will be able to navigate and combat enemies more easily.
 
-### Progression ###
+### Player Progression ###
 
-Progression in our game is designed to reward players with a sense of satisfaction in their in-game abilities. As players delve deeper into the lair of the Admin, they will unlock new weapons that greatly expand their combat options. Each new weapon caters to a distinct playstyle, whether that be melee, long-range, or even running around with a grappling hook. Weapons are introduced at key points in the story.
-
-Other than weapon progression, players also able to increase thier range of movement abilities. As they progress they can unlock more advanced movement techniques such as dashing, sliding, or wall running. Mastering their movement will be crucial for both their combat and world exploration.
+Progression in our game is designed to reward players with a sense of satisfaction in their in-game abilities. As players delve deeper into the lair of the Admin, they will unlock new weapons that greatly expand their combat options. Each new weapon caters to a distinct playstyle, whether that be melee, long-range, or even running around with a grappling hook. Weapons are introduced at key points in the story. The first weapon unlockable is a simple nail gun.
 
 [img]
 
@@ -118,6 +116,7 @@ The game uses Unity’s rigidbodies system to simulate real-world physics and co
 **Overall Aesthetic**: The game features a minimalistic yet unsettling low-poly art style, adding to the eerie, dreamlike atmosphere. The simplicity of the low-poly assets creates a sense of detachment and unease, reinforcing the game's uncomfortable tone.
 
 [img]
+<img title="Isolated elevator" alt="Alt text" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shutterstock.com%2Fsearch%2Fcreepy-elevator&psig=AOvVaw1XZ-iH8D06urm3K84LrFdr&ust=1724637334280000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCNjx8_GEj4gDFQAAAAAdAAAAABAR">
 
 **Environment and Colors**: The game starts in an infinite office space, shrouded in perpetual fog that obscures the player's vision. This office is vast, empty, and repetitive, with long, monotonous hallways, and cubicles. The dark colour palette consists mainly of muted greys, blacks, and deep blues. Bright blue light will appear near elevators, standing in stark contrast to the darker surroundings. This is to guide the player toward the next objective while evoking a sense of coldness and detachment.
 
