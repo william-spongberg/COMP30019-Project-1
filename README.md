@@ -68,7 +68,7 @@ Our game is a movement based FPS. The player will be able to fire weapons using 
 
 Wall running will also be implemented so that the player can interact more freely and creatively with the terrain. Especially as the game progresses and the environment of later levels becomes more complicated.
 
-[img]
+![Alt text] (https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/03/pjimage-2021-03-19T113749.666.jpg?q=50&fit=crop&w=1100&h=618&dpr=1.5) 
 
 The game’s controls are meant to have a high skill ceiling, so that players who are more experienced and more skillful will be able to navigate and combat enemies more easily.
 
