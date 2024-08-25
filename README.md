@@ -102,11 +102,11 @@ The world is procedurally and infinitely generated using Perlin noise to allow f
 
 1. The first level is an office space that portrays familiarity and order which allows the player to be deceived into a sense of comfort before realising something feels off.
 
-    [img]
+ <img title="First level" alt="Alt text" src="https://github.com/feit-comp30019/2024s2-project-1-alphabeta/blob/main/Images/image_2024-08-25_230238124.png?raw=true">
 
 2. The second level is outdoors in a city environment with buildings, roads and cars being placed now in a more disorderly manner, with the game’s world being reflected above the player in a manner similar to Dr Strange.
 
-    [img]
+ [IMG]
 
 3. The third and final level is much more abstract and bizarre, as the world design is now fully starting to leave normalcy far behind.
 
