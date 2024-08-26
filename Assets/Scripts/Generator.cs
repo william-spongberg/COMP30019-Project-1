@@ -23,7 +23,7 @@ public class Generator : MonoBehaviour
 
     // perlin noise vars
     [SerializeField]
-    private float noiseScale = 20f;
+    private float noiseScale = 2f;
     [SerializeField]
     private float offsetX = 100f;
     [SerializeField]
