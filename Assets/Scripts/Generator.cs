@@ -1,11 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// TODO: implement Perlin noise for choosing tiles
-// * also avoids terrain previously explored being completely deleted
-// * could also use to spawn enemies?? use different kinds of noise for different generation
-// * can still be a new game everytime (like minecraft)
-
 [System.Serializable]
 public class SpawnObject
 {
@@ -28,8 +23,7 @@ public class Generator : MonoBehaviour
 
     // perlin noise vars
     [SerializeField]
-    private float noiseScale = 10f;
-    // offsets to avoid repetitive patterns
+    private float noiseScale = 20f;
     [SerializeField]
     private float offsetX = 100f;
     [SerializeField]
@@ -101,15 +95,13 @@ public class Generator : MonoBehaviour
                         // scale to grid scale if not the same
                         if (obj.GetComponent<Renderer>().bounds.size.x != gridDimensions.x)
                         {
-                            obj.transform.localScale = new Vector3(gridDimensions.x / obj.GetComponent<Renderer>().bounds.size.x,
-                                    gridDimensions.x / obj.GetComponent<Renderer>().bounds.size.x,
-                                    gridDimensions.x / obj.GetComponent<Renderer>().bounds.size.x);
+                            float scale = gridDimensions.x / obj.GetComponent<Renderer>().bounds.size.x;
+                            obj.transform.localScale = new Vector3(scale, scale, scale);
                         }
                         else if (obj.GetComponent<Renderer>().bounds.size.z != gridDimensions.z)
                         {
-                            obj.transform.localScale = new Vector3(gridDimensions.z / obj.GetComponent<Renderer>().bounds.size.z,
-                                    gridDimensions.z / obj.GetComponent<Renderer>().bounds.size.z,
-                                    gridDimensions.z / obj.GetComponent<Renderer>().bounds.size.z);
+                            float scale = gridDimensions.z / obj.GetComponent<Renderer>().bounds.size.z;
+                            obj.transform.localScale = new Vector3(scale, scale, scale);
                         }
 
                         objects[gridPosition] = obj;
@@ -121,6 +113,7 @@ public class Generator : MonoBehaviour
 
     float GetPerlinNoiseValue(int x, int y, float scale, float offsetX, float offsetY)
     {
+        // built-in perlin noise
         float xCoord = (float)x / scale + offsetX;
         float yCoord = (float)y / scale + offsetY;
         return Mathf.PerlinNoise(xCoord, yCoord);
@@ -128,7 +121,7 @@ public class Generator : MonoBehaviour
 
     SpawnObject GetObjectBasedOnNoise(float noiseValue)
     {
-        // Assuming noiseValue is between 0 and 1, map it to the spawnObjects list
+        // map noise to a spawn object based on object count
         int index = Mathf.FloorToInt(noiseValue * spawnObjects.Count);
         index = Mathf.Clamp(index, 0, spawnObjects.Count - 1);
         return spawnObjects[index];
