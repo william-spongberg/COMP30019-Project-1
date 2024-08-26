@@ -430,6 +430,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1097170834075843813, guid: 1da39fd57a3bcf54b9087a9c79de9267, type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097170834075843813, guid: 1da39fd57a3bcf54b9087a9c79de9267, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097170834075843813, guid: 1da39fd57a3bcf54b9087a9c79de9267, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097170834075843813, guid: 1da39fd57a3bcf54b9087a9c79de9267, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700868212025925218, guid: 1da39fd57a3bcf54b9087a9c79de9267, type: 3}
+      propertyPath: canPush
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700868212025925218, guid: 1da39fd57a3bcf54b9087a9c79de9267, type: 3}
+      propertyPath: pushLayers.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 2249586084494534250, guid: 1da39fd57a3bcf54b9087a9c79de9267, type: 3}
       propertyPath: m_Name
       value: First Person Camera

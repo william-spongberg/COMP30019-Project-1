@@ -7,14 +7,12 @@ using UnityEngine;
 // * can still be a new game everytime (like minecraft)
 
 [System.Serializable]
-
-
 public class SpawnObject
 {
     public GameObject obj = null;
     public Vector3 dimensions = new(0, 0, 0);
     public Vector3 offsets = new(0, 0, 0);
-    public int spawnWeight = 10;
+    // public int spawnWeight = 10;
 }
 
 public class Generator : MonoBehaviour
@@ -27,6 +25,16 @@ public class Generator : MonoBehaviour
     private Vector3 gridDimensions = new(0, 0, 0);
     [SerializeField]
     private GameObject player;
+
+    // perlin noise vars
+    [SerializeField]
+    private float noiseScale = 10f;
+    // offsets to avoid repetitive patterns
+    [SerializeField]
+    private float offsetX = 100f;
+    [SerializeField]
+    private float offsetY = 100f;
+
     [SerializeField]
     private List<SpawnObject> spawnObjects = new List<SpawnObject>();
     [SerializeField]
@@ -42,7 +50,7 @@ public class Generator : MonoBehaviour
         }
 
         // TODO: need to all be same length, fix in future?
-        // ! for now just set grid size to size of first object in list
+        // * for now just set grid size to size of first object in list
         gridDimensions.x = spawnObjects[0].dimensions.x;
         gridDimensions.y = spawnObjects[0].dimensions.y;
         gridDimensions.z = spawnObjects[0].dimensions.z;
@@ -78,32 +86,52 @@ public class Generator : MonoBehaviour
                 Vector2Int gridPosition = new Vector2Int(x, y);
                 if (!objects.ContainsKey(gridPosition))
                 {
-                    Vector3 worldPosition = new Vector3(x * (gridDimensions.x + gap), -gridDimensions.y, y * (gridDimensions.z + gap));
-
-                    SpawnObject sObj = GetRandomObj();
-                    Vector3 offset = sObj.offsets;
-                    GameObject obj = sObj.obj;
-
-                    obj = Instantiate(obj, worldPosition + offset, Quaternion.identity);
-
-                    // scale to grid scale if not the same
-                    if (obj.GetComponent<Renderer>().bounds.size.x != gridDimensions.x)
+                    float noiseValue = GetPerlinNoiseValue(x, y, noiseScale, offsetX, offsetY);
+                    SpawnObject sObj = GetObjectBasedOnNoise(noiseValue);
+                    if (sObj != null)
                     {
-                        obj.transform.localScale = new Vector3(gridDimensions.x / obj.GetComponent<Renderer>().bounds.size.x,
-                                   gridDimensions.x / obj.GetComponent<Renderer>().bounds.size.x,
-                                   gridDimensions.x / obj.GetComponent<Renderer>().bounds.size.x);
-                    }
-                    else if (obj.GetComponent<Renderer>().bounds.size.z != gridDimensions.z)
-                    {
-                        obj.transform.localScale = new Vector3(gridDimensions.z / obj.GetComponent<Renderer>().bounds.size.z,
-                                   gridDimensions.z / obj.GetComponent<Renderer>().bounds.size.z,
-                                   gridDimensions.z / obj.GetComponent<Renderer>().bounds.size.z);
-                    }
 
-                    objects[gridPosition] = obj;
+                        Vector3 worldPosition = new Vector3(x * (gridDimensions.x + gap), -gridDimensions.y, y * (gridDimensions.z + gap));
+                        Vector3 offset = sObj.offsets;
+                        GameObject obj = sObj.obj;
+
+                        obj = Instantiate(obj, worldPosition + offset, Quaternion.identity);
+
+                        // ! in progress attempt to fix objects not being of same size in grid
+                        // scale to grid scale if not the same
+                        if (obj.GetComponent<Renderer>().bounds.size.x != gridDimensions.x)
+                        {
+                            obj.transform.localScale = new Vector3(gridDimensions.x / obj.GetComponent<Renderer>().bounds.size.x,
+                                    gridDimensions.x / obj.GetComponent<Renderer>().bounds.size.x,
+                                    gridDimensions.x / obj.GetComponent<Renderer>().bounds.size.x);
+                        }
+                        else if (obj.GetComponent<Renderer>().bounds.size.z != gridDimensions.z)
+                        {
+                            obj.transform.localScale = new Vector3(gridDimensions.z / obj.GetComponent<Renderer>().bounds.size.z,
+                                    gridDimensions.z / obj.GetComponent<Renderer>().bounds.size.z,
+                                    gridDimensions.z / obj.GetComponent<Renderer>().bounds.size.z);
+                        }
+
+                        objects[gridPosition] = obj;
+                    }
                 }
             }
         }
+    }
+
+    float GetPerlinNoiseValue(int x, int y, float scale, float offsetX, float offsetY)
+    {
+        float xCoord = (float)x / scale + offsetX;
+        float yCoord = (float)y / scale + offsetY;
+        return Mathf.PerlinNoise(xCoord, yCoord);
+    }
+
+    SpawnObject GetObjectBasedOnNoise(float noiseValue)
+    {
+        // Assuming noiseValue is between 0 and 1, map it to the spawnObjects list
+        int index = Mathf.FloorToInt(noiseValue * spawnObjects.Count);
+        index = Mathf.Clamp(index, 0, spawnObjects.Count - 1);
+        return spawnObjects[index];
     }
 
     void DestroyObjects(float playerX, float playerZ)
@@ -136,6 +164,8 @@ public class Generator : MonoBehaviour
         return objects.Count;
     }
 
+    // old spawn logic, purely random
+    /*
     SpawnObject GetRandomObj()
     {
         int totalWeight = 0;
@@ -159,5 +189,5 @@ public class Generator : MonoBehaviour
             }
         }
         return null;
-    }
+    } */
 }
