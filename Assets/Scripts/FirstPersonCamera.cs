@@ -6,11 +6,18 @@ public class FirstPersonCamera : MonoBehaviour
 {
 
     [SerializeField]
-    private float mouseSensitivity = 100f;
+    private float pitchSensitivity = 100f;
+    [SerializeField]
+    private float yawSensitivity = 100f;
     [SerializeField]
     private Transform playerCapsule;
 
+    [SerializeField]
+    private float rotationSmoothTime = 0.05f; // Damping time for smoothing
     private float xRotation = 0f;
+    private float yRotation = 0f;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,20 +29,27 @@ public class FirstPersonCamera : MonoBehaviour
     void LateUpdate()
     {
         // Get mouse input, adjust according to sensitivity and make it frame independent
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * yawSensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * pitchSensitivity * Time.deltaTime;
 
         // Subtraction used to follow natural movement of mouse
         xRotation -= mouseY;
 
+        yRotation += mouseX;
+
         // Avoid flipping the camera over
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-        // Rotates the camera up/down
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        // Calculate pitch (x-axis rotation)
+        Quaternion pitchRotation = Quaternion.Euler(xRotation, 0f, 0f);
 
-        // Rotates player left/right instead of moving the camera directly
-        playerCapsule.Rotate(Vector3.up * mouseX);
-        
+        // Calculate yaw (y-axis rotation)
+        Quaternion yawRotation = Quaternion.Euler(0f, yRotation, 0f);
+
+        // Apply smoothed pitch
+        transform.localRotation = Quaternion.Slerp(transform.localRotation, pitchRotation, rotationSmoothTime);
+
+        // Apply smoothed yaw
+        playerCapsule.rotation = Quaternion.Slerp(playerCapsule.rotation, yawRotation, rotationSmoothTime);
     }
 }
