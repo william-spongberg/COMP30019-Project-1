@@ -20,7 +20,7 @@ public class FirstPersonCameraNoSmooth : MonoBehaviour
     }
 
     // Update is called once per frame
-    void LateUpdate()
+    void Update()
     {
         // Get mouse input, adjust according to sensitivity and make it frame independent
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
