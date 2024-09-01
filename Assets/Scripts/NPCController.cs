@@ -40,6 +40,6 @@ public class NPCController : MonoBehaviour
         anim.SetFloat("Speed", speed);
 
         // animation multiplier
-        anim.SetFloat("MotionSpeed", speed*1.1f);
+        anim.SetFloat("MotionSpeed", speed);
     }
 }
