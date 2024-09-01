@@ -133,3 +133,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFlickering: 0
   timeDelay: 0
+  lightObject: {fileID: 654834666045056924}
