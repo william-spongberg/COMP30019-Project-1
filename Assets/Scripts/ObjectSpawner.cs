@@ -7,6 +7,8 @@ public class NPCSpawner : MonoBehaviour
     [SerializeField]
     private float radius = 10.0f;
     [SerializeField]
+    private Vector3 offset = Vector3.zero;
+    [SerializeField]
     private KeyCode key = KeyCode.F;
     [SerializeField]
     private List<GameObject> objects = new();
@@ -35,7 +37,7 @@ public class NPCSpawner : MonoBehaviour
         float playerX = player.transform.position.x;
         float playerZ = player.transform.position.z;
 
-        Vector3 pos = new(Random.Range(-radius + playerX, radius + playerX), 0, Random.Range(-radius + playerZ, radius + playerZ));
+        Vector3 pos = new(playerX + offset.x + Random.Range(-radius, radius), offset.y, playerZ + offset.z + Random.Range(-radius, radius));
 
         // spawn randomly within x radius of player
         GameObject newObj = Instantiate(objects[randomIndex], pos, Quaternion.identity);
