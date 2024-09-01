@@ -1361,6 +1361,7 @@ GameObject:
   - component: {fileID: 7854437136863214570}
   - component: {fileID: 4579409698440211922}
   - component: {fileID: -8864798933904232486}
+  - component: {fileID: 576238711838329015}
   m_Layer: 0
   m_Name: NPC_SuitGirl
   m_TagString: Untagged
@@ -1427,8 +1428,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c061b5cabc9b1943a422d474b8bdac9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothDeltaPosition: {x: 0, y: 0}
-  velocity: {x: 0, y: 0}
+  speed: 0
+  velocity: {x: 0, y: 0, z: 0}
   dest: {x: 0, y: 0, z: 0}
 --- !u!195 &7854437136863214570
 NavMeshAgent:
@@ -1491,6 +1492,19 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 1, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &576238711838329015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3714298338384521418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a590276926d18d4e83b8b9d41b54a00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 40
 --- !u!1 &3812609458454494591
 GameObject:
   m_ObjectHideFlags: 0
