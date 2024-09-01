@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/StartScene.unity
+    path: Assets/StartScene.unity
     guid: c08f244e28fb02d4780aa115d4d38991
   - enabled: 1
     path: Assets/Scenes/InfiniteOffice.unity
