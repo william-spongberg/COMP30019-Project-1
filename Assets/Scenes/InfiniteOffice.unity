@@ -122,6 +122,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &576763101 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2365769589790293471, guid: 1da39fd57a3bcf54b9087a9c79de9267, type: 3}
+  m_PrefabInstance: {fileID: 7562766174864283612}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2053327792 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3238390373545454291, guid: 79a50cdee7b64474486e23436e8857e3, type: 3}
@@ -318,7 +323,7 @@ PrefabInstance:
     - target: {fileID: 3238390373545454291, guid: 79a50cdee7b64474486e23436e8857e3, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 576763101}
     - target: {fileID: 3238390373545454291, guid: 79a50cdee7b64474486e23436e8857e3, type: 3}
       propertyPath: radius
       value: 20
@@ -378,7 +383,7 @@ PrefabInstance:
     - target: {fileID: 3348909574137736185, guid: 79a50cdee7b64474486e23436e8857e3, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 576763101}
     - target: {fileID: 3348909574137736185, guid: 79a50cdee7b64474486e23436e8857e3, type: 3}
       propertyPath: spawnObjects.Array.size
       value: 2
