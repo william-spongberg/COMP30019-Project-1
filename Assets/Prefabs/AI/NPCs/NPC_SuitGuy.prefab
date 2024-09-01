@@ -499,6 +499,7 @@ GameObject:
   - component: {fileID: 4461594321626173006}
   - component: {fileID: 551615157900585864}
   - component: {fileID: -5999221506016955094}
+  - component: {fileID: -1879932727196591405}
   m_Layer: 0
   m_Name: NPC_SuitGuy
   m_TagString: Untagged
@@ -564,8 +565,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c061b5cabc9b1943a422d474b8bdac9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothDeltaPosition: {x: 0, y: 0}
-  velocity: {x: 0, y: 0}
+  speed: 0
+  velocity: {x: 0, y: 0, z: 0}
   dest: {x: 0, y: 0, z: 0}
 --- !u!195 &4461594321626173006
 NavMeshAgent:
@@ -628,6 +629,19 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 1, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &-1879932727196591405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525009086107834282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a590276926d18d4e83b8b9d41b54a00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 40
 --- !u!1 &1584498476201538459
 GameObject:
   m_ObjectHideFlags: 0

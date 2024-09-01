@@ -400,6 +400,7 @@ GameObject:
   - component: {fileID: 5162436446485828897}
   - component: {fileID: -7021071566461400831}
   - component: {fileID: 7449824978540864059}
+  - component: {fileID: -2745566219305359660}
   m_Layer: 0
   m_Name: NPC_OfficeGuy
   m_TagString: Untagged
@@ -465,8 +466,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c061b5cabc9b1943a422d474b8bdac9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothDeltaPosition: {x: 0, y: 0}
-  velocity: {x: 0, y: 0}
+  speed: 0
+  velocity: {x: 0, y: 0, z: 0}
   dest: {x: 0, y: 0, z: 0}
 --- !u!195 &5162436446485828897
 NavMeshAgent:
@@ -529,6 +530,19 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 1, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &-2745566219305359660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915697562179448519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a590276926d18d4e83b8b9d41b54a00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 30
 --- !u!1 &2403093236394697238
 GameObject:
   m_ObjectHideFlags: 0

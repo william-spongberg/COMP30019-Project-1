@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FirstPersonCameraNoSmooth : MonoBehaviour
+public class FPCamera : MonoBehaviour
 {
 
     [SerializeField]
